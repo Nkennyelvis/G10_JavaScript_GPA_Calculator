@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top */
+    min-height: 100vh;
+    margin: 20px; /* Add some margin around the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.input-section input[type="text"],
+.input-section input[type="number"] {
+    flex: 1; /* Allow inputs to grow */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 120px; /* Ensure inputs don't get too small */
+}
+
+.input-section button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-section button:hover {
+    background-color: #218838;
+}
+
+.assignments-list-section {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+#assignmentsList {
+    list-style: none;
+    padding: 0;
+}
+
+#assignmentsList li {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#assignmentsList li span {
+    font-weight: bold;
+    color: #555;
+}
+
+#assignmentsList li .remove-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease;
+}
+
+#assignmentsList li .remove-btn:hover {
+    background-color: #c82333;
+}
+
+.gpa-display-section {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+#gpaValue {
+    font-size: 2em;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.instruction {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Basic responsiveness */
+@media (max-width: 480px) {
+    .input-section {
+        flex-direction: column;
+    }
+    .input-section input,
+    .input-section button {
+        width: 100%;
+    }
+}
